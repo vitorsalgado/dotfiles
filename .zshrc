@@ -21,8 +21,8 @@ else
     export EDITOR='code'
 fi
 
-HISTSIZE=15000
-SAVEHIST=15000
+HISTSIZE=30000
+SAVEHIST=30000
 HISTCONTROL=ignorespace:ignoredups
 HISTFILE=~/.zsh_history
 DEFAULT_USER=$(whoami)
@@ -34,16 +34,6 @@ autoload -Uz compinit && compinit
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOBIN
-export FLUTTER_HOME="$HOME/tools/flutter"
-export PATH=$PATH:$FLUTTER_HOME/bin
-export PATH=$PATH:"$HOME/tools/" # local tools
-export PATH=$PATH:"$HOME/tools/scripts" # jetbrains
-export PATH=$PATH:"$HOME/Library/Python/2.7/bin"
-export PATH=$PATH:"$HOME/.cargo/bin" # rust
-export PATH=$PATH:/Applications/CMake.app/Contents/bin
-export PATH=$PATH:"/usr/local/bin/aws_completer" # aws
-
-complete -C '/usr/local/bin/aws_completer' aws
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -59,10 +49,12 @@ autoload -Uz compinit && compinit
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias ll="ls -l"
+alias dots='dotfiles'
+alias ll="ls -la"
 alias grep="grep --color"
 
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
+[[ -f "$HOME/.aliases_local" ]] && source "$HOME/.aliases_local"
 [[ -f "$HOME/.zshrc_local" ]] && source "$HOME/.zshrc_local"
 
 eval "$(rbenv init -)" # ruby

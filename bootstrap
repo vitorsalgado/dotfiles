@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+brew update
+brew upgrade
+brew bundle
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh-my-zsh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash # nvm
+
+# backup files
+for file in .zshrc .gitconfig .gitignore .aliases Brewfile
+do
+    [[ -f "$HOME/${file}" ]] && mv -f "${file}" "${file}.backup"
+done
+
+git clone https://github.com/dracula/zsh.git $HOME/.tmp
+git clone --bare git@github.com:vitorsalgado/dotfiles.git $HOME/.dotfiles
+
+# zsh theme
+cp dracula.zsh-theme .oh-my-zsh/custom/themes/dracula.zsh-theme
+
+# dotfiles repository
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+config config --local status.showUntrackedFiles no
+config checkout
+
+touch .gitconfig_local
+touch .zshrc_local
+
+# cleanup
+rm -rf $HOME/.tmp

@@ -1,0 +1,10 @@
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
+alias workspace="cd ~/workspace"
+alias github="cd ~/workspace/github"
+alias p="cd ~/workspace"
+
+alias g="git"
+alias h="history"
+alias nb="npm run build"
+alias nt="npm test"

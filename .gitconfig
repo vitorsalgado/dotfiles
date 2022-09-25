@@ -1,0 +1,70 @@
+[alias]
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	s = status -s
+	p = !"git pull; git submodule foreach git pull origin master"
+	c = clone --recursive
+	ca = !git add -A && git commit -av
+	go = checkout -B
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+	reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+	# show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	
+	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
+	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+
+	# find branches containing commit
+	fb = "!f() { git branch -a --contains $1; }; f"
+	
+	# find tags containing commit
+	ft = "!f() { git describe --always --contains $1; }; f"
+	
+	# find commits by source code
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+	
+	# find commits by commit message
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+	
+	# remove branches that have already been merged with master
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+[user]
+	name = Vitor Hugo Salgado
+	email = 2922948+vitorsalgado@users.noreply.github.com
+
+[include]
+	path = ~/.gitconfig_local
+
+[core]
+	autocrlf = input
+	editor = code --wait
+	excludes = ~/.gitignore
+
+[color]
+	ui = auto
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[github]
+    user = vitorsalgado	
+
+[hub]
+	protocol = ssh
+
+[commit]
+	gpgsign = true
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
