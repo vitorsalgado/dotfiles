@@ -28,8 +28,6 @@ HISTFILE=~/.zsh_history
 DEFAULT_USER=$(whoami)
 
 setopt HIST_SAVE_NO_DUPS
-autoload -Uz promptinit && promptinit
-autoload -Uz compinit && compinit
 
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
@@ -43,6 +41,8 @@ export NVM_DIR="$HOME/.nvm"
 # asdf
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
+
+autoload -Uz promptinit && promptinit
 autoload -Uz compinit && compinit
 
 # sdkman
@@ -50,8 +50,6 @@ autoload -Uz compinit && compinit
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dots='dotfiles'
-alias ll="ls -la"
-alias grep="grep --color"
 
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 [[ -f "$HOME/.aliases_local" ]] && source "$HOME/.aliases_local"
