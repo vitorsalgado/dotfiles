@@ -1,5 +1,6 @@
 # navigation
 alias zshconfig="code ~/.zshrc"
+alias zshconfig_local="code ~/.zshrc_local"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias workspace="cd ~/workspace"
 alias github="cd ~/workspace/github"

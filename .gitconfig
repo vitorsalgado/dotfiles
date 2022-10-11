@@ -36,9 +36,6 @@
 	name = Vitor Hugo Salgado
 	email = 2922948+vitorsalgado@users.noreply.github.com
 
-[include]
-	path = ~/.gitconfig_local
-
 [core]
 	autocrlf = input
 	editor = code --wait
@@ -67,4 +64,7 @@
 
 [push]
 	default = simple
-	autoSetupRemote = true
+  autoSetupRemote = true
+
+[include]
+	path = ~/.gitconfig_local
