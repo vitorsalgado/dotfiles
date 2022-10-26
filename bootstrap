@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh-my-zsh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash # nvm
@@ -18,9 +18,8 @@ git clone --bare https://github.com/vitorsalgado/dotfiles.git $HOME/.dotfiles
 cp $HOME/.tmp/dracula.zsh-theme .oh-my-zsh/custom/themes/dracula.zsh-theme
 
 # dotfiles repository
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-config config --local status.showUntrackedFiles no
-config checkout
+/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 
 touch .gitconfig_local
 touch .zshrc_local
