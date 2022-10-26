@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-brew update
-brew upgrade
-brew bundle
+xcode-select --install --yes
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh-my-zsh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash # nvm
@@ -26,6 +26,10 @@ config checkout
 
 touch .gitconfig_local
 touch .zshrc_local
+
+brew update
+brew upgrade
+brew bundle
 
 # cleanup
 rm -rf $HOME/.tmp
