@@ -15,7 +15,7 @@ git clone https://github.com/dracula/zsh.git $HOME/.tmp
 git clone --bare https://github.com/vitorsalgado/dotfiles.git $HOME/.dotfiles
 
 # zsh theme
-cp dracula.zsh-theme .oh-my-zsh/custom/themes/dracula.zsh-theme
+cp $HOME/.tmp/dracula.zsh-theme .oh-my-zsh/custom/themes/dracula.zsh-theme
 
 # dotfiles repository
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
