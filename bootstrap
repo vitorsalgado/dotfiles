@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-xcode-select --install --yes
+xcode-select --install
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
