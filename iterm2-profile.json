@@ -386,6 +386,7 @@
     "Alpha Component" : 0.5,
     "Green Component" : 0.1491314172744751
   },
+  "Initial Text" : "",
   "Scrollback Lines" : 1000,
   "Send Code When Idle" : false,
   "Close Sessions On End" : true,
@@ -399,7 +400,7 @@
     "Red Component" : 0.54509803921568623
   },
   "ASCII Ligatures" : false,
-  "Name" : "Default",
+  "Name" : "std",
   "Cursor Text Color" : {
     "Green Component" : 1,
     "Blue Component" : 1,
