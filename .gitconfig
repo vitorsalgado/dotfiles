@@ -64,7 +64,7 @@
 
 [push]
 	default = simple
-  autoSetupRemote = true
+  	autoSetupRemote = true
 
 [include]
 	path = ~/.gitconfig_local

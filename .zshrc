@@ -1,6 +1,3 @@
-# fig
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
 
@@ -55,8 +52,5 @@ alias dots='dotfiles'
 [[ -f "$HOME/.aliases_local" ]] && source "$HOME/.aliases_local"
 [[ -f "$HOME/.zshrc_local" ]] && source "$HOME/.zshrc_local"
 
-eval "$(rbenv init -)" # ruby
+eval "$(rbenv init - zsh)" # ruby
 eval "$(starship init zsh)" # init starship terminal
-
-# fig
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
