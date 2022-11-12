@@ -5,7 +5,7 @@ ZSH_THEME="dracula"
 
 source $ZSH/oh-my-zsh.sh
 
-plugins=(gcloud)
+plugins=()
 
 export GPG_TTY=$(tty)
 export HOMEBREW_NO_ANALYTICS=1
