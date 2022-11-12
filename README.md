@@ -6,6 +6,6 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/vitorsalgado/dotfiles/main/bootstrap)"
 ```
 
-## Reference
+## reference
 
 - https://www.atlassian.com/git/tutorials/dotfiles
