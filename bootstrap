@@ -6,6 +6,7 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2 # asdf
 
 # folders
 mkdir -p ~/workspace/github
+mkdir -p ~/bin
 
 # backup files
 for file in .zshrc .gitconfig .gitignore .aliases Brewfile
