@@ -1,5 +1,6 @@
 [alias]
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	lg = git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all
 	s = status -s
 	p = !"git pull; git submodule foreach git pull origin master"
 	c = clone --recursive
