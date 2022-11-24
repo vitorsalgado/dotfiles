@@ -15,7 +15,7 @@ do
 done
 
 git clone https://github.com/dracula/zsh.git $HOME/.tmp
-git clone --bare https://github.com/vitorsalgado/dotfiles.git $HOME/.dotfiles
+git clone --bare git@github.com:vitorsalgado/dotfiles.git $HOME/.dotfiles
 
 # zsh theme
 cp $HOME/.tmp/dracula.zsh-theme .oh-my-zsh/custom/themes/dracula.zsh-theme
