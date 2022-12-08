@@ -18,13 +18,7 @@ else
     export EDITOR='code'
 fi
 
-HISTSIZE=30000
-SAVEHIST=30000
-HISTCONTROL=ignorespace:ignoredups
-HISTFILE=~/.zsh_history
 DEFAULT_USER=$(whoami)
-
-setopt HIST_SAVE_NO_DUPS
 
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
@@ -51,4 +45,15 @@ alias dots='dotfiles'
 [[ -f "$HOME/.zshrc_local" ]] && source "$HOME/.zshrc_local"
 
 eval "$(rbenv init - zsh)" # ruby
-eval "$(starship init zsh)" # init starship terminal
+
+export HISTCONTROL=ignorespace:ignoredups
+export HISTSIZE=10000000
+export SAVEHIST=$HISTSIZE
+export HISTFILE=~/.zsh_history
+
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt INC_APPEND_HISTORY
