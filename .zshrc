@@ -47,6 +47,9 @@ export HISTSIZE=10000000
 export SAVEHIST=$HISTSIZE
 export HISTFILE=~/.zsh_history
 
+# k8s
+export KUBE_EDITOR='open -a "Visual Studio Code" --wait'
+
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS

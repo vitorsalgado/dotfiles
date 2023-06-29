@@ -6,11 +6,13 @@ alias workspace="cd ~/workspace"
 alias github="cd ~/workspace/github"
 alias p="cd ~/workspace"
 
-# general
-alias ll="ls -la"
-alias g="git"
-alias h="history"
-
 # nodejs
 alias nb="npm run build"
 alias nt="npm test"
+
+# general
+alias ll="ls -la"
+alias ls='ls -F'
+alias h="history"
+alias listeners='lsof -a +c 0 -i TCP -s TCP:LISTEN'
+alias g="git"
