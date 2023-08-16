@@ -11,12 +11,8 @@ export GPG_TTY=$(tty)
 export HOMEBREW_NO_ANALYTICS=1
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='code'
-else
-    export EDITOR='code'
-fi
+export EDITOR="code --wait"
+export KUBE_EDITOR="code --wait"
 
 DEFAULT_USER=$(whoami)
 
@@ -46,9 +42,6 @@ export HISTCONTROL=ignorespace:ignoredups
 export HISTSIZE=10000000
 export SAVEHIST=$HISTSIZE
 export HISTFILE=~/.zsh_history
-
-# k8s
-export KUBE_EDITOR='open -a "Visual Studio Code" --wait'
 
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
