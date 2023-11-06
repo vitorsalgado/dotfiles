@@ -10,6 +10,9 @@ alias p="cd ~/workspace"
 alias nb="npm run build"
 alias nt="npm test"
 
+# k8s
+alias k="kubectl"
+
 # general
 alias ll="ls -la"
 alias ls='ls -F'
