@@ -17,6 +17,7 @@ export KUBE_EDITOR="code --wait"
 DEFAULT_USER=$(whoami)
 
 export PATH=$PATH:~/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
