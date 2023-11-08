@@ -17,5 +17,9 @@ alias k="kubectl"
 alias ll="ls -la"
 alias ls='ls -F'
 alias h="history"
-alias listeners='lsof -a +c 0 -i TCP -s TCP:LISTEN'
 alias g="git"
+alias nv="nvim"
+alias nvc="nvim ."
+
+# utils
+alias listeners='lsof -a +c 0 -i TCP -s TCP:LISTEN'
