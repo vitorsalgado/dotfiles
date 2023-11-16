@@ -17,6 +17,8 @@ local noremap = { remap = true, silent = false }
 -- Configurations
 --
 
+let g:loaded_perl_provider = 0
+
 cmd([[ let extension = expand('%:e') ]])
 
 cmd([[ set bg=dark ]])

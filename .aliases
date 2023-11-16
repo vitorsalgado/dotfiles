@@ -1,3 +1,5 @@
+alias python=python3
+
 # navigation
 alias zshconfig="code ~/.zshrc"
 alias zshconfig_local="code ~/.zshrc_local"
