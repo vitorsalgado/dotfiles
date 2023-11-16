@@ -17,8 +17,6 @@ local noremap = { remap = true, silent = false }
 -- Configurations
 --
 
-let g:loaded_perl_provider = 0
-
 cmd([[ let extension = expand('%:e') ]])
 
 cmd([[ set bg=dark ]])
@@ -31,6 +29,12 @@ cmd([[
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
+
+vim.g.loaded_python3_provider = 1
+vim.g.loaded_python_provider = 1
+vim.g.loaded_node_provider = 1
+vim.g.loaded_ruby_provider = 1
+vim.g.loaded_perl_provider = 1
 
 g.mapleader = ' '
 g.maplocalleader = ','
