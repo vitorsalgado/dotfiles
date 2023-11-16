@@ -26,8 +26,6 @@ api.events.subscribe(api.events.Event.FileCreated, function(file)
   vim.cmd("edit " .. file.fname)
 end)
 
-vim.keymap.set('n', 'ga', git_add, opts('Git Add'))
-
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
     renderer = {

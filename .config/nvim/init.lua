@@ -117,6 +117,8 @@ keymap.set('x', 'x', '"_x') -- delete visual selection
 keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', remap) --toggle file explorer
 keymap.set('n', '<space><space>', ':NvimTreeToggle<CR>', remap)
 
+keymap.set('n', 'ga', git_add, opts('Git Add'))
+
 api.nvim_create_augroup('cursorline_focus', {})
 
 api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {
