@@ -1,3 +1,5 @@
+local utils = require('utils')
+
 require('plugins')
 
 local cmd = vim.cmd
@@ -6,8 +8,6 @@ local opt = vim.opt
 local g = vim.g
 local api = vim.api
 local keymap = vim.keymap
-
-local utils = require('utils')
 
 -- Vars
 -- 
