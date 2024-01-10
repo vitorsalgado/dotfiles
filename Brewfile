@@ -34,6 +34,8 @@ brew "homeport/tap/dyff"
 brew "fd"
 brew "ripgrep"
 brew "pyenv"
+brew "watch"
+brew "the_silver_searcher"
 
 cask "altair-graphql-client"
 cask "font-fira-code-nerd-font"
