@@ -36,6 +36,7 @@
 [user]
 	name = Vitor Hugo Salgado
 	email = 2922948+vitorsalgado@users.noreply.github.com
+	signingKey = 7D24236031517813
 
 [core]
 	autocrlf = input
@@ -69,3 +70,9 @@
 
 [include]
 	path = ~/.gitconfig_local
+[gpg]
+	program = gpg2
+[url "ssh://git@vervegroup/vervegroup"]
+	insteadOf = https://github.com/vervegroup
+[url "ssh://git@vervewireless/vervewireless"]
+	insteadOf = https://github.com/vervewireless

@@ -19,7 +19,6 @@ export HISTFILE=~/.zsh_history
 export EDITOR="code --wait"
 export KUBE_EDITOR="code --wait"
 export PATH=$PATH:~/bin
-export PATH=$PATH:$(go env GOPATH)/bin
 
 autoload -Uz promptinit && promptinit
 autoload -Uz compinit && compinit
@@ -39,6 +38,9 @@ alias dots='dotfiles'
 [[ -f "$HOME/.aliases_local" ]] && source "$HOME/.aliases_local"
 [[ -f "$HOME/.zshrc_local" ]] && source "$HOME/.zshrc_local"
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# rust
+. "$HOME/.cargo/env"
 
 # ruby
 eval "$(rbenv init - zsh)"

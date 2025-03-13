@@ -116,6 +116,7 @@ keymap.set('n', 'x', '"_x') -- delete char
 keymap.set('x', 'x', '"_x') -- delete visual selection
 keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', remap) --toggle file explorer
 keymap.set('n', '<space><space>', ':NvimTreeToggle<CR>', remap)
+keymap.set('n', '<S-S>', ':find', remap)
 
 keymap.set('n', 'ga', git_add, { desc = 'nvim-tree: Git Add', noremap = true, silent = true, nowait = true })
 
